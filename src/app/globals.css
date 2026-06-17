@@ -21,9 +21,182 @@ body {
   background-color: var(--bg);
   color: var(--text);
   font-family: "Georgia", serif;
+}
+
+.hero {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  width: 100%;
+  padding: 2rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  animation: fadeIn 1.8s ease forwards;
+  opacity: 0;
+}
+
+.hero-eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.hero-name {
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.hero-tagline {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text);
+  opacity: 0.5;
+}
+
+.hero-links {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.hero-links a {
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text);
+  text-decoration: none;
+  opacity: 0.6;
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease;
+}
+
+.hero-links a:hover {
+  opacity: 1;
+  color: var(--accent);
+}
+
+/* Partition */
+.partition {
+  width: 90%;
+  margin: 0 auto;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--accent),
+    transparent
+  );
+}
+
+/* Section */
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.section-title {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+
+/* Experience card */
+.experience-card {
+  border: 1px solid rgba(200, 169, 110, 0.15);
+  border-radius: 4px;
+  padding: 2rem;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.experience-role {
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--text);
+}
+
+.experience-org {
+  font-size: 0.85rem;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  margin-top: 0.3rem;
+}
+
+.experience-date {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--text);
+  opacity: 0.4;
+  text-transform: uppercase;
+}
+
+/* Expandable detail cards */
+.experience-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.detail-card {
+  border: 1px solid rgba(232, 228, 220, 0.08);
+  border-radius: 3px;
+}
+
+.detail-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1.2rem;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  text-align: left;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.detail-trigger:hover {
+  opacity: 1;
+}
+
+.detail-icon {
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+.detail-body {
+  padding: 0 1.2rem 1rem;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--text);
+  opacity: 0.6;
 }
 
 .container {
